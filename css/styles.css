@@ -1,0 +1,78 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background-color: #1a1a1a; font-family: 'Helvetica', sans-serif; padding: 20px; }
+
+.container { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+
+.card { 
+    background: #000; 
+    border: 1px solid #333;
+    border-radius: 15px; 
+    padding: 30px; 
+    display: flex; 
+    align-items: center; 
+    color: white;
+    position: relative; /* Necesario para posicionar la línea */
+    overflow: hidden; /* Evita que la línea sobresalga de la tarjeta */
+}
+
+/* Ajuste para que la izquierda esté un poco más arriba */
+.card-left { 
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -15px; /* Desplazamiento hacia arriba */
+}
+
+.card-left img { width: 100%; max-width: 150px; }
+.brand-text { letter-spacing: 5px; font-size: 0.8rem; margin-top: -20px; }
+
+/* La línea divisoria torcida */
+.divider {
+    width: 1px;
+    height: 80px;
+    background: #555;
+    transform: rotate(15deg); /* Inclinación de la línea */
+    margin: 0 20px;
+}
+
+/* Diseño Derecha */
+.card-right { 
+    flex: 1.5; 
+    padding-left: 20px; 
+    display: flex;
+    flex-direction: column;
+}
+.card-right h2 { margin-bottom: 15px; font-size: 1.4rem; }
+
+.contact-row { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    color: white; 
+    text-decoration: none; 
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 480px) {
+    .card { flex-direction: column; text-align: center; gap: 20px; }
+    .divider { display: none; } /* Ocultar línea en móvil */
+    .card-left { margin-top: 0; }
+    .card-right { padding-left: 0; align-items: center; }
+}
+
+/* Línea debajo del nombre */
+.name-divider {
+    width: 50px;           /* Longitud de la línea */
+    height: 1px;           /* Grosor */
+    background: #555;      /* Color gris */
+    margin-bottom: 15px;   /* Espacio entre la línea y los datos de contacto */
+    margin-top: -5px;      /* Ajuste fino para acercarlo al nombre */
+}
+
+/* Ajuste adicional para móvil */
+@media (max-width: 480px) {
+    .name-divider { margin-left: auto; margin-right: auto; }
+}
