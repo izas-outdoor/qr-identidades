@@ -76,3 +76,19 @@ body { background-color: #1a1a1a; font-family: 'Helvetica', sans-serif; padding:
 @media (max-width: 480px) {
     .name-divider { margin-left: auto; margin-right: auto; }
 }
+.btn-download {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #333; /* Un gris oscuro elegante */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px; /* Bordes redondeados */
+    font-size: 0.85rem;
+    transition: background 0.3s;
+    text-align: center;
+}
+
+.btn-download:hover {
+    background: #555;
+}
