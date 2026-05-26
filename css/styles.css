@@ -76,19 +76,48 @@ body { background-color: #1a1a1a; font-family: 'Helvetica', sans-serif; padding:
 @media (max-width: 480px) {
     .name-divider { margin-left: auto; margin-right: auto; }
 }
-.btn-download {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #333; /* Un gris oscuro elegante */
-    color: #fff;
-    text-decoration: none;
-    border-radius: 20px; /* Bordes redondeados */
-    font-size: 0.85rem;
-    transition: background 0.3s;
-    text-align: center;
+/* Nuevo diseño para el catálogo prominente */
+.catalog-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alineación a la izquierda */
+    margin: 15px 0 25px 0; /* Espaciado generoso */
+    width: 100%; /* Ocupar el ancho disponible */
 }
 
-.btn-download:hover {
-    background: #555;
+.catalog-image-large {
+    width: 100%; /* Imagen más grande */
+    max-width: 250px; /* Ancho máximo para que no sea excesivo */
+    height: auto;
+    border-radius: 8px; /* Bordes suavizados */
+    border: 1px solid #333; /* Un pequeño borde para integrarla */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Sombra para profundidad */
+    margin-bottom: 15px; /* Espacio antes del botón */
+}
+
+/* Botón de descarga bilingüe y apilado */
+.btn-download-stacked {
+    display: block;
+    width: 100%; /* Botón de ancho completo de la sección */
+    max-width: 250px; /* Misma anchura que la imagen */
+    padding: 12px;
+    background: #222; /* Color oscuro */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    text-align: center;
+    border: 1px solid #444;
+    transition: background 0.3s;
+}
+
+.btn-download-stacked:hover {
+    background: #333;
+}
+
+/* Ajuste adicional para móvil */
+@media (max-width: 480px) {
+    .catalog-section {
+        align-items: center; /* Centrar todo en móvil */
+    }
 }
